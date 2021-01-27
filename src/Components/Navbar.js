@@ -1,16 +1,26 @@
-import React from 'react';
-
-const Navbar = () => {
+import React from "react";
+import Logo from "../Assets/logo.png";
+import { animateScroll as scroll } from "react-scroll";
+const Navbar = ({ scrollRef }) => {
   return (
     <div className="Navbar">
-      <h1 className="title">Piper</h1>
+      <img className="logo" src={Logo} />
 
       <div className="navi">
-        <h2>Careers</h2>
-        <button className="basic">Request a Demo</button>
+        <a href="https://app.hirewithpiper.com">
+          <h2>Log In</h2>
+        </a>
+        <button
+          onClick={() => {
+            scroll.scrollToBottom();
+          }}
+          className="basic hover"
+        >
+          Request a Demo
+        </button>
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;
