@@ -1,38 +1,547 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
 .App {
+
+}
+
+.Navbar{
+  width: 100vw;
+  height: 100px;
+  padding: 20px 200px;
+  background: white;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+}
+
+.title{
+  font-weight: 800;
+  color: rgb(86, 210, 145);
+}
+
+.navi{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navi > *{
+  margin-left: 32px;
+  font-size: 1em;
+  user-select: none;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.navi > h2:hover{
+  opacity: 0.3;
+}
+
+.Landing{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25vh;
+}
+
+.Landing .title{
+  text-align: center;
+  font-size: 4em;
+  margin-bottom: 0px;
+  color: #56d391;
+}
+
+.Landing button{
+  margin-bottom: -50px;
+  z-index: 2;
+}
+
+.Landing img{
+  z-index: 1;
+}
+
+.Landing .subtitle{
+  margin-top: 24px;
+  margin-bottom: 24px;
+  line-height:normal;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.subtitle{
+  line-height: 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button{
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 1em;
+  color: white;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.basic{
+  background-color: rgb(86, 210, 145);
+  padding: 15px 30px;
+  box-shadow: 0 1px 3px rgba(86,210,145,0.12), 0 1px 2px rgba(86,210,145,0.24);
+  transition: 300ms;
+}
+
+.basic:active{
+  background-color: rgb(92, 153, 121);
+}
+
+.hover:hover{
+  box-shadow: 0 14px 28px rgba(86,210,145,0.25), 0 10px 10px rgba(86,210,145,0.22);
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.minimal{
+  background-color: none;
+  color: rgb(86, 210, 145);
+}
+
+.minimal:hover{
+  text-decoration: underline;
+}
+
+.Landing > * {
+  margin-bottom: 16px;
+}
+
+.Info1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 400px 0;
+  padding: 0 20vw;
+}
+
+.Info1 .container{
+  width: 30vw;
+}
+
+.Info1 .container > *{
+  margin-bottom: 20px;
+}
+
+.Info1 img{
+  width: 300px;
+  height: 280px;
+}
+
+.Info2 svg{
+  margin-bottom: -5px;
+}
+
+.Info2 .container{
+  background-color: rgb(86, 210, 145);
+  height: 30vh;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Info2 .wave{
+  display: block;
+}
+
+.Info2 .card-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+.Info2 .card{
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  background-color: #313131;
+  margin: 0 2vw;
+  padding: 32px;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+  box-shadow: 0 1px 3px rgba(86,210,145,0.12), 0 1px 2px rgba(86,210,145,0.24);
+}
+
+.Info2 .card > *{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Info2 .card h1{
+  margin-bottom: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Info2 .card p{
+  font-size: 0.7em;
+}
+
+.Info2 .icon{
+  width: 100px;
+  margin-bottom: 16px;
+}
+
+
+
+
+
+.Info3{
+  background-color: rgb(86, 210, 145);
+}
+
+.Info3 .card-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Info3 svg{
+  fill: currentColor;
+  color: white;
+}
+
+.Info3 .card{
+  background-color: white;
+  border-radius: 5px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 64px;
+  margin: 8px;
+}
+
+.Info3 > .card-container > h1{
+  color: white;
+}
+
+.Info3 h1{
+  color: #313131;
+}
+
+.Info3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 300px 0;
+}
+
+.module-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.module{
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.text-container{
+  width: 300px;
+}
+
+.module-container h1{
+  font-size: 1.5em;
+}
+
+.module-container p{
+  font-size: 0.7em;
+}
+
+.Info4 .big-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 400px 0;
+  padding: 0 20vw;
+}
+
+
+.Info4 img{
+  width: 300px;
+  height: 280px;
+}
+
+
+.Info4 .container{
+  width: 30vw;
+}
+
+.Info4 .container > *{
+  margin-bottom: 20px;
+}
+
+.underline
+{
+    position: relative;
+}
+
+.underline:nth-child(1):before{
+  animation-delay: 1200ms;
+}
+.underline:nth-child(2):before{
+  animation-delay: 1500ms;
+}
+
+.underline:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 5px;
+  bottom: -5px;
+  left: -5%;
+  background-color: rgb(86, 210, 145);
+  transition: all 0.3s ease-in-out;
+  animation-name: underline-anim;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes underline-anim {
+  from{
+    width: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  to{
+    width: 110%;
   }
+}
+
+.Form{
+  background-color: rgb(75, 75, 75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20vw;
+}
+
+.Form .title{
+  color: white;
+  margin-bottom: 16px;
+}
+
+.Form .subtitle{
+  color: white;
+  text-align: center;
+  width: 40vw;
+  margin-bottom: 32px;
+}
+
+.Form input{
+  width: 30vw;
+  height: 50px;
+  border-radius: 50px;
+  padding: 0 20px;
+  font-size: 1em;
+  margin-bottom: 8px;
+}
+
+.Form input:focus{
+  outline: none;
+}
+
+.Form form{
+  display: flex;
+  flex-direction: column;
+}
+
+.Form form button{
+  border-radius: 50px;
+}
+
+@media only screen and (max-width: 992px) {
+  /* For mobile phones: */
+  .Info2 .card-container{
+    flex-direction: column;
+  }
+
+  .Info2 .card{
+    width: 70vw;
+    height: 300px;
+    margin-bottom: 8px;
+  }
+
+  .Info2 .icon{
+    width: 70px;
+  }
+
+  .Info3 .card-container{
+    margin-top: 80vh;
+  }
+
+}
+
+@media only screen and (max-width: 992px) {
+  /* For mobile phones: */
+  .Info1{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2vw;
+  }
+
+  .Info1 .container{
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+  }
+
+  .Info2 .card-container{
+    flex-direction: column;
+  }
+
+  .Info2 .card{
+    width: 70vw;
+    height: 300px;
+    margin-bottom: 8px;
+  }
+
+  .Info2 .icon{
+    width: 70px;
+  }
+
+  .Info4 .big-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2vw;
+  }
+
+  .Info4 .container{
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+  }
+
+  .Form .subtitle{
+    width: 60vw;
+  }
+
+  .Form input{
+    width: 60vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  .Navbar{
+    padding: 20px 20px;
+  }
+  .Landing .title{
+    font-size: 3em;
+  }
+
+  .Landing .subtitle{
+    padding: 0 50px;
+  }
+
+  .Landing img{
+    width: 100vw;
+  }
+
+  .Landing button{
+    margin-bottom: -30px;
+    z-index: 2;
+  }
+
+  .Info1{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2vw;
+  }
+
+  .Info1 .container{
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+  }
+
+  .Info2 .card-container{
+    flex-direction: column;
+  }
+
+  .Info2 .card{
+    width: 90vw;
+    height: 300px;
+    margin-bottom: 8px;
+  }
+
+  .Info2 .icon{
+    width: 70px;
+  }
+
+  .Info3 .card-container{
+    margin-top: 100vh;
+  }
+
+  .Info3 .card{
+    width: 80vw;
+  }
+
+  .Info3 h1{
+    font-size: 1.5em;
+  }
+
+  .Info4 .big-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2vw;
+  }
+
+  .Info4 .container{
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+  }
+
+  .Form input{
+    width: 60vw;
+  }
+
 }
