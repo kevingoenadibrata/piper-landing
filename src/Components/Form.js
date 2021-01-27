@@ -22,8 +22,8 @@ const Form = ({ scrollRef }) => {
       </p>
       <form name="demo" method="post">
         <input type="hidden" name="form-name" value="demo" />
-        <input placeholder="Name" name="name" />
-        <input placeholder="Email" name="email" />
+        <input placeholder="Name" name="name" required />
+        <input placeholder="Email" name="email" required />
         <button type="submit" className="basic submit">
           Submit
         </button>
