@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Wireframe from "../Assets/wireframe.png";
 import Fade from "react-reveal/Fade";
 import { Waypoint } from "react-waypoint";
 
@@ -12,23 +11,20 @@ const Form = ({ scrollRef }) => {
         topOffset="30%"
         bottomOffset="30%"
       />
-      {/*<Fade bottom when={visible}>*/}
-      <h1 className="title">We need your help</h1>
-      <p className="subtitle">
-        Help us build the perfect solution to recruitment. If you have done
-        recruiting before and can relate to the problem we analyzed, we need
-        your help. We want to have a quick interview with you. Please fill up
-        the form below and we will contact you for the interview process.
-      </p>
+      <h2 className="title">Design a tailored hiring pipeline that helps your organization win at scale</h2>
+      <p2 className="subtitle">
+        To empower your company to rapid scale, we offer the easy-to-use and customizable tools to manage all the hiring hassle
+      </p2>
       <form name="demo" method="post">
         <input type="hidden" name="form-name" value="demo" />
         <input placeholder="Name" name="name" required />
         <input placeholder="Email" name="email" required />
-        <button type="submit" className="basic submit">
-          Submit
-        </button>
+        <div>
+          <button type="submit" className="basic hover">
+            Get Started for Free
+          </button>
+        </div>
       </form>
-      {/* </Fade> */}
     </div>
   );
 };

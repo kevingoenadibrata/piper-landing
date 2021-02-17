@@ -2,15 +2,48 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: "Sora", sans-serif;
 }
 .App {
 }
 
-.Navbar {
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 0.8em;
+}
+
+p {
+  font-size: 16px;
+}
+
+p2 {
+  font-size: 12px;
+}
+
+.NavbarContainer {
   width: 100vw;
-  height: 100px;
-  padding: 20px 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Navbar {
+  height: 60px;
+  padding: 20px 50px;
+  border-radius: 0 0 5px 5px;
   background: white;
   z-index: 999;
   display: flex;
@@ -19,16 +52,14 @@
   align-items: center;
   position: fixed;
   top: 0;
-  /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
-}
-
-.title {
-  font-weight: 800;
-  color: rgb(86, 210, 145);
+  width: 90vw;
+  -webkit-box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.22);
+  box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.22);
 }
 
 .logo {
-  height: 30px;
+  height: 20px;
 }
 
 .navi {
@@ -48,7 +79,6 @@ a:visited {
 
 .navi * {
   margin-left: 32px;
-  font-size: 1em;
   user-select: none;
   cursor: pointer;
   transition: 300ms;
@@ -66,41 +96,55 @@ a:visited {
 
 .Landing {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 25vh;
+  width: 100vw;
+  margin-top: 35vh;
 }
 
-.Landing .title {
-  text-align: center;
-  font-size: 4em;
-  margin-bottom: 0px;
-  color: #56d391;
+.title {
+  color: black;
 }
 
-.Landing button {
-  margin-bottom: -50px;
-  z-index: 2;
-}
-
-.Landing img {
-  z-index: 1;
-}
-
-.Landing .subtitle {
-  margin-top: 24px;
-  margin-bottom: 24px;
-  line-height: normal;
-  text-align: center;
+.Landing .left {
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .subtitle {
-  line-height: 24px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  line-height: normal;
+}
+
+.Landing .right {
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Landing img {
+  width: 40vw;
+}
+
+.Landing .mockup {
+  z-index: 2;
+  position: absolute;
+  margin-top: 5vh;
+}
+
+.Landing .shape {
+  position: absolute;
+  z-index: 1;
+  margin-left: 15vw;
+  margin-top: -5vh;
 }
 
 button {
-  border-radius: 2px;
+  border-radius: 3px;
   font-weight: 600;
   font-size: 1em;
   color: white;
@@ -108,6 +152,26 @@ button {
   box-shadow: none;
   cursor: pointer;
   outline: none;
+}
+
+button:hover {
+  box-shadow: 0 14px 28px rgba(86, 210, 145, 0.25),
+    0 10px 10px rgba(86, 210, 145, 0.22);
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.button-sm {
+  padding: 7px 15px;
+  font-size: 0.8em;
+  background-color: #4bc281;
+}
+
+.button-sm:hover {
+  box-shadow: 0 14px 28px rgba(86, 210, 145, 0.25),
+    0 10px 10px rgba(86, 210, 145, 0.22);
+  padding: 12px 23px;
+  border-radius: 10px;
 }
 
 .basic {
@@ -120,13 +184,6 @@ button {
 
 .basic:active {
   background-color: rgb(92, 153, 121);
-}
-
-.hover:hover {
-  box-shadow: 0 14px 28px rgba(86, 210, 145, 0.25),
-    0 10px 10px rgba(86, 210, 145, 0.22);
-  padding: 20px 40px;
-  border-radius: 10px;
 }
 
 .minimal {
@@ -145,126 +202,77 @@ button {
 .Info1 {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin: 400px 0;
-  padding: 0 20vw;
+  justify-content: center;
+  margin: 50vh 0;
+}
+
+.bigContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Info1 .container {
-  width: 30vw;
-}
-
-.Info1 .container > * {
-  margin-bottom: 20px;
-}
-
-.Info1 img {
-  width: 300px;
-  height: 280px;
-}
-
-.Info2 svg {
-  margin-bottom: -5px;
-}
-
-.Info2 .container {
-  background-color: rgb(86, 210, 145);
-  height: 30vh;
-  width: 100%;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.Info2 .wave {
-  display: block;
-}
-
-.Info2 .card-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 4;
-}
-
-.Info2 .card {
-  width: 300px;
-  height: 400px;
-  border-radius: 10px;
-  background-color: #313131;
-  margin: 0 2vw;
-  padding: 32px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  box-shadow: 0 1px 3px rgba(86, 210, 145, 0.12),
-    0 1px 2px rgba(86, 210, 145, 0.24);
-}
-
-.Info2 .card > * {
-  color: white;
-}
-
-.Info2 .card h1 {
-  margin-bottom: 16px;
-}
-
-.Info2 .card p {
-  font-size: 0.7em;
-}
-
-.Info2 .icon {
-  width: 100px;
-  margin-bottom: 16px;
-}
-
-.Info3 {
-  background-color: rgb(86, 210, 145);
-}
-
-.Info3 .card-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.Info3 svg {
-  fill: currentColor;
-  color: white;
-}
-
-.Info3 .card {
-  background-color: white;
+  width: 60vw;
+  background-color: #242424;
   border-radius: 5px;
-  width: 50vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 48px 64px;
-  margin: 8px;
+  padding: 64px;
+  z-index: 2;
+  box-shadow: 0px 4px 27px rgba(75, 194, 129, 0.35);
 }
 
-.Info3 > .card-container > h1 {
+.Info1 .greendeco {
+  width: 62vw;
+  background-color: rgb(86, 210, 145);
+  border-radius: 5px;
+  padding: 48px;
+  position: absolute;
+  z-index: 1;
+}
+
+.Info1 .greendeco * {
+  opacity: 0;
+}
+
+.Info1 * {
   color: white;
 }
 
-.Info3 h1 {
-  color: #313131;
+.Info1 .container > p {
+  margin-bottom: 32px;
 }
 
-.Info3 {
+.Info1 .greendeco > p {
+  margin-bottom: 32px;
+}
+
+.Info1ElementsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Info1Element {
+  width: 40%;
+  margin-bottom: 32px;
+}
+
+.Info1Element img {
+  width: 50px;
+}
+
+.Info2 {
+  width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 300px 0;
+  margin-bottom: 200px;
+}
+
+.Info2Container {
+  width: 60vw;
+  display: flex;
+  justify-content: space-between;
 }
 
 .module-container {
@@ -293,6 +301,49 @@ button {
   font-size: 0.7em;
 }
 
+.Info3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-top: 35vh;
+}
+
+.title {
+  color: black;
+}
+
+.Info3 .left {
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.Info3 .right {
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Info3 img {
+  width: 40vw;
+}
+
+.Info3 .mockup {
+  z-index: 2;
+  position: absolute;
+  margin-top: 5vh;
+}
+
+.Info3 .shape {
+  position: absolute;
+  z-index: 1;
+  margin-left: 15vw;
+  margin-top: -5vh;
+}
+
 .Info4 .big-container {
   display: flex;
   flex-direction: row;
@@ -314,44 +365,7 @@ button {
   margin-bottom: 20px;
 }
 
-.underline {
-  position: relative;
-}
-
-.underline:nth-child(1):before {
-  animation-delay: 1200ms;
-}
-.underline:nth-child(2):before {
-  animation-delay: 1500ms;
-}
-
-.underline:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 5px;
-  bottom: -5px;
-  left: -5%;
-  background-color: rgb(86, 210, 145);
-  transition: all 0.3s ease-in-out;
-  animation-name: underline-anim;
-  animation-duration: 0.3s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-}
-
-@keyframes underline-anim {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 110%;
-  }
-}
-
 .Form {
-  background-color: rgb(75, 75, 75);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -360,12 +374,11 @@ button {
 }
 
 .Form .title {
-  color: white;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .Form .subtitle {
-  color: white;
   text-align: center;
   width: 40vw;
   margin-bottom: 32px;
@@ -374,10 +387,11 @@ button {
 .Form input {
   width: 30vw;
   height: 50px;
-  border-radius: 50px;
+  border-radius: 5px;
   padding: 0 20px;
   font-size: 1em;
   margin-bottom: 8px;
+  border: 2px solid #242424;
 }
 
 .Form input:focus {
@@ -386,16 +400,29 @@ button {
 
 .Form form {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
-.Form form button {
-  border-radius: 50px;
+.Footer {
+  width: 100vw;
+  padding: 50px 10vw;
+  background: #242424;
 }
 
-.Form .submit:hover {
-  background-color: #5da17d;
-  cursor: pointer;
+.Footer img {
+  width: 100px;
+  margin-bottom: 8px;
+}
+
+.Footer * {
+  color: white;
+}
+
+.FooterContainer {
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 992px) {

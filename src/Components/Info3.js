@@ -1,35 +1,40 @@
-import React, {useState} from 'react';
-import Gears from '../Assets/gears.svg';
-import Blocks from '../Assets/blocks.svg';
-import Database from '../Assets/database.svg';
-import Fade from 'react-reveal/Fade';
-import { Waypoint } from 'react-waypoint';
+import React from "react";
+import Mockup2 from "../Assets/mockup2.png";
+import Fade from "react-reveal/Fade";
+import { animateScroll as scroll } from "react-scroll";
 
 const Info3 = () => {
-  const [visible, setVisible] = useState(false);
-
   return (
     <div className="Info3">
-    <Waypoint onEnter={() => setVisible(true)} topOffset="10%" bottomOffset="40%"/>
-      <Fade bottom cascade when={visible}>
-        <div className="card-container">
-          <h1>How Piper works</h1>
-          <br />
-          <div className="card">
-            <h1>1. Design your recruitment process and requirements</h1>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
-          <div className="card">
-            <h1>2. Publish the unique link to job searching platforms</h1>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
-          <div className="card">
-            <h1>3. Our system will automate all candidate and will notify you if review or interview is needed</h1>
-          </div>
-        </div>
+      <Fade bottom distance="100px" duration={1500}>
+        <img src={Mockup2} />
       </Fade>
+      <div className="left">
+        <Fade top distance="20px" duration={1500}>
+          <div>
+            <h2 className="title">Be Great at Hiring:</h2>
+            <h2 className="title">Hiring Dashboard</h2>
+            <h2 className="title">and Form Builder</h2>
+            <p className="subtitle">
+              Piper provide a simple, intuitive and effective tools for hiring
+              team to manage every step of recruiting process. Source,
+              interview, and hire the right candidates all in one platform
+            </p>
+          </div>
+          <div>
+            <button
+              className="basic hover"
+              onClick={() => {
+                scroll.scrollToBottom();
+              }}
+            >
+              Get Started for Free
+            </button>
+          </div>
+        </Fade>
+      </div>
     </div>
   );
-}
+};
 
 export default Info3;
