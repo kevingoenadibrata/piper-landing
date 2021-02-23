@@ -101,6 +101,7 @@ a:visited {
   align-items: center;
   width: 100vw;
   margin-top: 35vh;
+  overflow-x: hidden;
 }
 
 .title {
@@ -269,10 +270,15 @@ button:hover {
   margin-bottom: 200px;
 }
 
+.Info2Element {
+  margin-bottom: 32px;
+}
+
 .Info2Container {
   width: 60vw;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .module-container {
@@ -329,6 +335,7 @@ button:hover {
 
 .Info3 img {
   width: 40vw;
+  margin-right: 16px;
 }
 
 .Info3 .mockup {
@@ -427,164 +434,120 @@ button:hover {
 
 @media only screen and (max-width: 992px) {
   /* For mobile phones: */
-  .Info2 .card-container {
-    flex-direction: column;
+  h1 {
+    font-size: 36px;
   }
 
-  .Info2 .card {
-    width: 70vw;
-    height: 300px;
-    margin-bottom: 8px;
+  h2 {
+    font-size: 24px;
   }
 
-  .Info2 .icon {
-    width: 70px;
-  }
-
-  .Info3 .card-container {
-    margin-top: 80vh;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  /* For mobile phones: */
-  .Info1 {
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    padding: 0 2vw;
+  p {
+    font-size: 12px;
   }
 
   .Info1 .container {
     width: 80vw;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: 24px;
   }
 
-  .Info2 .card-container {
-    flex-direction: column;
+  .Info1 .greendeco {
+    width: 85vw;
   }
 
-  .Info2 .card {
-    width: 70vw;
-    height: 300px;
-    margin-bottom: 8px;
-  }
-
-  .Info2 .icon {
-    width: 70px;
-  }
-
-  .Info4 .big-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 2vw;
-  }
-
-  .Info4 .container {
+  .Info2Container {
     width: 80vw;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: 24px;
   }
 
   .Form .subtitle {
-    width: 60vw;
+    width: 70vw;
   }
 
   .Form input {
-    width: 60vw;
+    width: 70vw;
   }
 }
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
 
-  .Navbar {
-    padding: 20px 20px;
-  }
-  .Landing .title {
-    font-size: 3em;
+  .Landing {
+    flex-direction: column-reverse;
+    margin-top: 25vh;
   }
 
-  .Landing .subtitle {
-    padding: 0 50px;
+  .Landing .left {
+    width: 90vw;
+  }
+
+  .Landing .right {
+    width: 90vw;
   }
 
   .Landing img {
-    width: 100vw;
+    width: 70vw;
   }
 
-  .Landing button {
-    margin-bottom: -30px;
+  .Landing .mockup {
     z-index: 2;
+    position: initial;
+  }
+
+  .Landing .shape {
+    position: absolute;
+    z-index: 1;
+    margin-left: 15vw;
+    margin-top: -5vh;
   }
 
   .Info1 {
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    padding: 0 2vw;
+    margin: 25vh 0;
+  }
+
+  .Info1Element {
+    width: 80%;
+    margin-bottom: 32px;
   }
 
   .Info1 .container {
-    width: 80vw;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: 24px;
+    width: 95vw;
+    padding: 32px;
   }
 
-  .Info2 .card-container {
-    flex-direction: column;
+  .Info1 .greendeco {
+    display: none;
   }
 
-  .Info2 .card {
+  .Info3 {
+    flex-direction: column;
+    margin-top: 25vh;
+  }
+
+  .Info3 img {
     width: 90vw;
-    height: 300px;
-    margin-bottom: 8px;
+    margin-bottom: 32px;
   }
 
-  .Info2 .icon {
-    width: 70px;
+  .Info3 .left {
+    width: 90vw;
   }
 
-  .Info3 .card-container {
-    margin-top: 100vh;
+  .Info3 .right {
+    width: 90vw;
+  }
+  .Form {
+    padding: 100px 0;
   }
 
-  .Info3 .card {
-    width: 80vw;
-  }
-
-  .Info3 h1 {
-    font-size: 1.5em;
-  }
-
-  .Info4 .big-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 2vw;
-  }
-
-  .Info4 .container {
-    width: 80vw;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: 24px;
+  .Form .subtitle {
+    width: 90vw;
   }
 
   .Form input {
-    width: 60vw;
+    width: 90vw;
+    margin-bottom: 16px;
+  }
+
+  .Navbar {
+    width: 100vw;
   }
 }
