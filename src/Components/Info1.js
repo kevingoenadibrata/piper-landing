@@ -41,27 +41,27 @@ const Info1 = () => {
               <Info1Element
                 icon={faClipboardList}
                 title="Company Job Board"
-                description="Improve candidate quality by building end-to-end pipeline coverage from source to hire to rediscovery"
+                description="Simply post job openings in careers page by embedding your job board on the company website - no coding needed."
               />
               <Info1Element
                 icon={faHammer}
                 title="Form Builder"
-                description="Improve candidate quality by building end-to-end pipeline coverage from source to hire to rediscovery"
+                description="Get up to speed in creating a hiring form to prescreen, register, and to collect any candidate information."
               />
               <Info1Element
                 icon={faCalendarAlt}
                 title="Interview Scheduler"
-                description="Improve candidate quality by building end-to-end pipeline coverage from source to hire to rediscovery"
+                description="Simplify your scheduling task with candidates without the back-and-forth messaging and emails."
               />
               <Info1Element
                 icon={faEnvelope}
                 title="Automated Mailer"
-                description="Improve candidate quality by building end-to-end pipeline coverage from source to hire to rediscovery"
+                description="Put repetitive hiring emails into templates and free up more time to close the best candidates."
               />
               <Info1Element
                 icon={faCubes}
                 title="Structured Hiring"
-                description="Improve candidate quality by building end-to-end pipeline coverage from source to hire to rediscovery"
+                description="Standardize hiring process so your hiring team can be more effective and make better hires."
               />
             </div>
           </div>

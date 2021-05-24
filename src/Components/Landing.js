@@ -19,7 +19,7 @@ const Landing = () => {
             <button
               className="basic hover"
               onClick={() => {
-                scroll.scrollToBottom();
+                window.open("https://app.hirewithpiper.com/signup", "_self");
               }}
             >
               Get Started for Free

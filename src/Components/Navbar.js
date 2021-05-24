@@ -1,6 +1,5 @@
 import React from "react";
 import Logo from "../Assets/logo.png";
-import { animateScroll as scroll } from "react-scroll";
 import { BrowserView } from "react-device-detect";
 
 const Navbar = () => {
@@ -15,7 +14,7 @@ const Navbar = () => {
             </a>
             <button
               onClick={() => {
-                scroll.scrollToBottom();
+                window.open("https://app.hirewithpiper.com/signup", "_self");
               }}
               className="button-sm"
             >

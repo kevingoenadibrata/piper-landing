@@ -16,7 +16,7 @@ const Info3 = () => {
             <h2 className="title">Hiring Dashboard</h2>
             <h2 className="title">and Form Builder</h2>
             <p className="subtitle">
-              Piper provide a simple, intuitive and effective tools for hiring
+              Piper provide a simple, intuitive and effective tool for hiring
               team to manage every step of recruiting process. Source,
               interview, and hire the right candidates all in one platform
             </p>
@@ -25,7 +25,7 @@ const Info3 = () => {
             <button
               className="basic hover"
               onClick={() => {
-                scroll.scrollToBottom();
+                window.open("https://app.hirewithpiper.com/signup", "_self");
               }}
             >
               Get Started for Free

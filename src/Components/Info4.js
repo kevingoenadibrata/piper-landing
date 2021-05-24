@@ -9,7 +9,7 @@ const Info3 = () => {
       <div className="left">
         <Fade top distance="20px" duration={1500}>
           <h2 className="title">Why We Build Piper</h2>
-          <p2 className="subtitle">
+          <p className="subtitle">
             The world of recruiting is a competitive field. While you’re busy
             working on spreadsheets, forms, and making sure things are in the
             right place, your competitors are building relationships with great
@@ -18,7 +18,7 @@ const Info3 = () => {
             replacement for your HR. We are here to be your HR’s sidekick. We do
             what your HR are busy with, and your HR do what we cant, building
             relationships.
-          </p2>
+          </p>
         </Fade>
       </div>
 
